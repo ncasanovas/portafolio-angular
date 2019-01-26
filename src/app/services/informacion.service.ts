@@ -9,12 +9,30 @@ export class InformacionService {
 
   info:any = {};
   cargada:boolean = false;
+  equipo: any =[];
 
   constructor( public http:HttpClient) { 
+    this.cargarInfo();
+    this.cargarEquipo();
+    
+  }
+
+
+  private cargarInfo() {
     this.http.get("assets/data/info.pagina.json").subscribe( data =>{
-      console.log(data);
+      
       this.cargada = true;
       this.info = data;
-    })
+  });
+  }
+
+
+  private cargarEquipo(){
+    this.http.get("https://portafolio-6d5d9.firebaseio.com/equipo.json").subscribe( data =>{
+      
+      this.equipo = data;
+      console.log(data);
+      
+  });
   }
 }
