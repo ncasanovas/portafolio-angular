@@ -4,12 +4,15 @@ import {
     PortafolioComponent,
     ItemComponent
 } from  './components/index.paginas';
+import { SearchComponent } from './pages/search/search.component';
 
 const app_routes: Routes  = [
     { path: 'home', component: PortafolioComponent },
     { path: 'about', component: AboutComponent },
-    { path: 'producto', component: ItemComponent },
-    { path: '**', pathMatch: 'full', redirectTo: 'home' }
+    { path: 'producto/:id', component: ItemComponent },
+    { path: 'search/:termino', component: SearchComponent },
+    { path: '**', pathMatch: 'full', redirectTo: 'home' },
+    
 ];
 
 export const app_routing = RouterModule.forRoot(app_routes, {useHash:true});

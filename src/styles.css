@@ -24,3 +24,13 @@ svg rect{
 .fadeIn {
     animation-name: fadeIn;
 }
+
+.item-inside__meta {
+    background-color: #d9dce0;
+    padding: 20px;
+    
+  }
+
+  .ae-u-bolder{
+      padding-right: 10px;
+  }
