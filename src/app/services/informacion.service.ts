@@ -31,7 +31,7 @@ export class InformacionService {
     this.http.get("https://portafolio-6d5d9.firebaseio.com/equipo.json").subscribe( data =>{
       
       this.equipo = data;
-      console.log(data);
+      
       
   });
   }
