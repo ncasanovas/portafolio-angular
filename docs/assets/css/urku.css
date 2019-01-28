@@ -2027,7 +2027,7 @@ body {
     display: -webkit-flex;
     display: -ms-flexbox;
     display:         flex;
-    position: fixed;
+    /*position: fixed;*/
     top: 0;
     left: 0;
     z-index: 200;
